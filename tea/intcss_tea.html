@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-    background: linear-gradient(to right, rgb(29, 29, 33), rgb(108, 108, 108));
+body {
+    background: linear-gradient(to left, rgb(86, 0, 68), rgb(4, 4, 24), rgb(2, 65, 88));
     justify-content: center;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     width: 280px;
     height: 300px;
     position: relative;
-    background: linear-gradient(to left, #d1f3e4, #bab8b8);
+    background: linear-gradient(to left, #f4f4f4, #bab8b8);
     border-top: 5vw;
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
@@ -68,7 +68,7 @@
     top: -35px;
     width: 140px;
     height: 140px;
-    border: 25px solid #bab8b8;
+    border: 25px solid #edecec;
     border-left: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-radius: 50%;
@@ -117,11 +117,75 @@
     background: linear-gradient(to left, rgb(234, 233, 233), rgb(168, 168, 168), rgb(181, 180, 180));
 
 }
+.bottombase {
+    height: 10px;
+    width: 200px;
+    position: absolute;
+    top: 598px;
+    right: 247px;
+    background: linear-gradient(to bottom, rgb(49, 49, 49), rgb(212, 210, 210));
+    border-radius: 40%;
+
+}
+
+.vap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50px;
+    list-style: none;
+
+}
+.vap>li {
+    width: 3%;
+    height: 50px;
+    float: left;
+    border-radius: 50%;
+    margin: 0px 6.5%;
+    box-shadow: 0 0 40px white;
+   /* background-color: white;*/
+   transform: rotate(15deg);
+   opacity: 0;
+   filter: blur(8px);
+
+}
+
+li:nth-child(1) {
+    animation: ani 1.5s ease-out 1s infinite;
+}
+li:nth-child(2) {
+    animation: ani 1.7s ease-out .6s infinite;
+}
+li:nth-child(3) {
+    animation: ani 1s ease-out .6s infinite;
+}
+li:nth-child(4) {
+    animation: ani 1.3s ease-out 1.2s infinite;
+}
+li:nth-child(5) {
+    animation: ani 1.5s ease-out infinite;
+}
+@keyframes ani {
+    
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+        background-color: rgba(241,235,234, .25);
+    }
+    100%{
+        transform: translateY(-150px) scaleX(8);
+        opacity: 1;
+        background-color: rgba(241,235,234, .25);
+
+    }
+}
+
 
     </style>
     <title>cup_of_tea</title>
 </head>
 <body>
+    <div class="bottombase"></div>
     <div class="container">
         <div class="saucer"></div>
         <div class="base"></div>
@@ -132,10 +196,19 @@
                 </div>
             </div>
             <div class="teaspill"></div>
+            <ol class="vap">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
         </div>
         
         <div class="handle"></div>
 
+
     </div>
+
 </body>
 </html>
